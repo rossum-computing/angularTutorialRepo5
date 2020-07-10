@@ -1,6 +1,6 @@
 # Angular Tutorial - Pythonguru
 
-This repo covers the topics router params and http methods.
+Use service and nginx cofiguration files in backend_flask_service folder for your own deployment.
 
 
 ### Running the Project
@@ -21,4 +21,3 @@ $ ng serve -o
 ```
 
 
-Use service and nginx cofiguration files in backend_flask_service folder for your own deployemnt.
