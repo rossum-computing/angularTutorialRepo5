@@ -1,0 +1,18 @@
+<mat-spinner *ngIf="flag"></mat-spinner>
+
+
+<div *ngIf="!flag" class="card" style="display:inline-block">
+    <img class="mobile-img" [src]="mobileView.path">
+    <div class="card-container">
+        <h4 [ngClass] = "mobileView.price > 13000 ? 'blue' : 'orange'"><b>{{mobileView.name}}</b></h4>
+        <p [ngStyle]="{'color': mobileView.price > 13000 ? 'Blue' : 'Red'}">Rs {{mobileView.price}}</p>
+        <ul>
+            <li *ngFor="let description of mobileView.description">
+                {{description}}
+            </li>
+        </ul>
+    </div>
+    <div style="text-align: right; margin: 10px;">
+        <button class="btn info"  (click)="postItem()">Add to Cart</button>
+    </div>
+</div>

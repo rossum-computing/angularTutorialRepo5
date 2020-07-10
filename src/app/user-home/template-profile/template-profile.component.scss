@@ -1,0 +1,19 @@
+.btn {
+    border:none;
+    color: white;
+    padding: 10px 20px;
+    cursor:pointer;
+}
+
+.btn-hover {
+    background-color: #2196f3;
+}
+
+.btn-hover:hover {
+    background: #0b7dda;
+    box-shadow : 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+}
+
+.input-form {
+    margin-top: 12px;
+}

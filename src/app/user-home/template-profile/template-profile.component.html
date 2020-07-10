@@ -1,0 +1,33 @@
+<div style="margin: 50px;" *ngIf="flag">
+    <p>First Name : {{firstName}}</p>
+    <p>Last Name : {{lastName}}</p>
+    <p>phone No. : {{phone}}</p>
+    <p>Email : {{email}}</p>
+    <button style="margin:10px" class="btn btn-hover" (click)=formEdit()>Edit</button>
+</div>
+
+<div style = "margin:50px;" *ngIf="!flag">
+    <form>
+        <div class="input-form">
+            <label style="padding-right: 10px">First Name</label>
+            <input [(ngModel)]="firstName" type="text" name="first">
+        </div>
+
+        <div class="input-form">
+            <label style="padding-right: 10px">Last Name</label>
+            <input type="text" [(ngModel)]="lastName" name="last">
+        </div>
+
+        <div class="input-form">
+            <label style="padding-right: 10px">Phone</label>
+            <input type="number" [(ngModel)]="phone" name="phone">
+        </div>
+
+        <div class="input-form">
+            <label style="padding-right: 10px">Email</label>
+            <input type="email" [(ngModel)]="email" name="email" disabled>
+        </div>
+    </form>
+    <button style="margin:10px" class="btn btn-hover" (click)=formEdit()>Submit</button>
+
+</div>

@@ -1,0 +1,28 @@
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8 table-orders">
+    <!-- Position Column -->
+    <ng-container matColumnDef="order_id">
+      <mat-header-cell *matHeaderCellDef> Order ID </mat-header-cell>
+      <mat-cell *matCellDef="let order"> {{order.order_id}} </mat-cell>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let order"> {{order.name}} </mat-cell>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="price">
+      <mat-header-cell *matHeaderCellDef> Price </mat-header-cell>
+      <mat-cell *matCellDef="let order"> {{order.price}} </mat-cell>
+    </ng-container>
+  
+    <!-- delivery_date Column -->
+    <ng-container matColumnDef="delivery_date">
+      <mat-header-cell *matHeaderCellDef> Delivery Date </mat-header-cell>
+      <mat-cell *matCellDef="let order"> {{order.delivery_date}} </mat-cell>
+    </ng-container>
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>

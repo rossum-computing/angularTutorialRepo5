@@ -1,0 +1,50 @@
+<!-- <div class="card" routerLink="/mobileview" style="display:inline-block">
+    <img class="mobile-img" src="assets/nokia.jpg">
+    <div class="card-container">
+        <h4><b>Nokia</b></h4>
+        <p>Rs 12000</p>
+    </div>
+</div>
+
+<div  class="card" routerLink="/mobileview" style="display:inline-block">
+    <img class="mobile-img" src="assets/samsung.jpg">
+    <div class="card-container">
+        <h4><b>Samsung</b></h4>
+        <p>Rs 13000</p>
+    </div>
+</div>
+
+<div  class="card" routerLink="/mobileview" style="display:inline-block">
+    <img class="mobile-img" src="assets/sony.jpg">
+    <div class="card-container">
+        <h4><b>Sony</b></h4>
+        <p>Rs 14000</p>
+    </div>
+</div>
+
+<div  class="card" routerLink="/mobileview" style="display:inline-block">
+    <img class="mobile-img" src="assets/motorola.jpg">
+    <div class="card-container">
+        <h4><b>Motorola</b></h4>
+        <p>Rs 15000</p>
+    </div>
+</div>
+
+<div  class="card" routerLink="/mobileview" style="display:inline-block">
+    <img class="mobile-img" src="assets/apple.jpg">
+    <div class="card-container">
+        <h4><b>Apple</b></h4>
+        <p>Rs 16000</p>
+    </div>
+</div> -->
+
+<div class="card" *ngFor='let mobile of mobileData' style="display:inline-block">
+    <img class="mobile-img" [src]="mobile.path">
+    <div class="card-container" style="display: inline-block;">
+        <h4><b>{{mobile.name}}</b></h4>
+        <p>Rs {{mobile.price}}</p>
+    </div>
+    <div style="display: inline-block;margin-left:80px">
+        <button class="btn btn-hover" (click)='view(mobile.name)'>View</button>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+[Unit]
+Description=gunicorn instance to serve shopping_app.py
+After=network.target
+
+[Service]
+User=rossum
+Group=www-data
+WorkingDirectory=/home/rossum/angularTraining
+Environment="PATH=/home/rossum/angularTraining/venv/bin"
+ExecStart=/home/rossum/angularTraining/venv/bin/gunicorn --workers 3 --bind unix:angularTraining.sock -m 007 shopping_app:app
+
+[Install]
+WantedBy=multi-user.target
